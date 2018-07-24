@@ -1,15 +1,15 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'schema_plus/views/version'
+require 'schema_plus/sequences/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "schema_plus_views"
-  gem.version       = SchemaPlus::Views::VERSION
-  gem.authors       = ["ronen barzel"]
-  gem.email         = ["ronen@barzel.org"]
-  gem.summary       = %q{Adds support for views to ActiveRecord}
-  gem.homepage      = "https://github.com/SchemaPlus/schema_plus_views"
+  gem.name          = "schema_plus_sequences"
+  gem.version       = SchemaPlus::Sequences::VERSION
+  gem.authors       = ["Fractal Blockchain"]
+  gem.email         = ["hugo@frctls.com"]
+  gem.summary       = %q{Adds support for sequences to ActiveRecord}
+  gem.homepage      = "https://github.com/Fractal/schema_plus_sequences"
   gem.license       = "MIT"
 
   gem.files         = `git ls-files -z`.split("\x0")
@@ -17,8 +17,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "activerecord", "~> 4.2"
-  gem.add_dependency "schema_plus_core", "~> 1.0"
+  gem.add_dependency "activerecord", "~> 5.0"
+  gem.add_dependency "schema_plus_core", "~> 2.2.0"
 
   gem.add_development_dependency "bundler", "~> 1.7"
   gem.add_development_dependency "rake", "~> 10.0"
